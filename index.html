@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ล้อมรักษ์ บ้านนาสาร</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">ล</div>
+      <div><b>ล้อมรักษ์</b><small>บ้านนาสาร</small></div>
+    </div>
+    <nav>
+      <button class="nav active" data-page="dashboard">🏠 <span>Dashboard</span></button>
+      <button class="nav" data-page="persons">👥 <span>ผู้รับการติดตาม</span></button>
+      <button class="nav" data-page="followup">📋 <span>ติดตาม 12 เดือน</span></button>
+      <button class="nav" data-page="risk">❤️ <span>ประเมินความเสี่ยง</span></button>
+      <button class="nav" data-page="visits">🏡 <span>เยี่ยมบ้าน</span></button>
+      <button class="nav" data-page="points">⭐ <span>คะแนนล้อมรักษ์</span></button>
+      <button class="nav" data-page="reports">📊 <span>รายงาน</span></button>
+    </nav>
+    <div class="sidebar-foot">ระบบต้นแบบ<br>อำเภอบ้านนาสาร</div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div>
+        <h1 id="pageTitle">ภาพรวมระบบ</h1>
+        <p>ติดตาม • ดูแล • สร้างโอกาส • คืนสู่ชุมชน</p>
+      </div>
+      <button class="refresh" onclick="loadDashboard()">↻ รีเฟรช</button>
+    </header>
+    <section id="content" class="content"></section>
+  </main>
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head"><h2 id="modalTitle"></h2><button onclick="closeModal()">×</button></div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
